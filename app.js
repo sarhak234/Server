@@ -1,13 +1,12 @@
-const express=require('express')
-const app=express();
-const cors=require('cors')
+const express = require('express');
+const cors = require('cors');
 
-app.use(cors())
+const app = express();
+app.use(cors());
 
-app.post('/',(req,res)=>{
-    res.send({joke:'my name is sarthak mehta'})
-})
+app.post('/', (req, res) => {
+    res.send({ joke: 'my name is sarthak mehta' });
+});
 
-app.listen(5000,()=>{
-    console.log('app is running on port 5000')
-})
+// Export the Express API as a module
+module.exports = app;
